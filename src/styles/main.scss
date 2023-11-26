@@ -1,10 +1,7 @@
-// @forward 'colors';
-// @use 'colors' as *;
-
-@import 'colors';
-@import 'typography';
-@import 'mediaquery';
-@import 'layouts';
+@forward 'colors';
+@forward 'typography';
+@forward 'mediaquery';
+@forward 'layouts';
 
 *,
 *::before,

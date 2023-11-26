@@ -1,14 +1,12 @@
 $colors: (
-	light: (
-		0: hsl(198, 74%, 49%),
-		1: hsl(200, 72%, 61%),
-		2: hsl(200, 71%, 73%)
+	primary: (
+		light: #f2f2f2,
+		dark: #282828,
 	),
-	dark: (
-		0: hsl(10, 60%, 2%),
-		1: hsl(4, 85%, 66%),
-		2: hsl(4, 84%, 78%)
-	)
+	secondary: (
+		light: #f8f8f8,
+		dark: #222222,
+	),
 );
 
 @function color($color, $value: 0) {
@@ -24,8 +22,6 @@ $colors: (
 	--vt-c-black-soft: #222222;
 	--vt-c-black-mute: #282828;
 
-	--vt-c-indigo: #2c3e50;
-
 	--vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
 	--vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
 	--vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
@@ -35,24 +31,13 @@ $colors: (
 	--vt-c-text-light-2: rgba(60, 60, 60, 0.66);
 	--vt-c-text-dark-1: var(--vt-c-white);
 	--vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
-
-	--blue-0: color(light, 0);
-	--blue-1: color(light, 1);
-	--blue-2: color(light, 2);
-
-	--red-0: color(dark, 0);
-	--red-1: color(dark, 1);
-	--red-2: color(dark, 2);
 }
 
 @media (prefers-color-scheme: light) {
 	:root {
-		--color-background: var(--vt-c-white);
-		--color-background-soft: var(--vt-c-white-soft);
-		--color-background-mute: var(--vt-c-white-mute);
-
-		--color-border: var(--vt-c-divider-light-2);
-		--color-border-hover: var(--vt-c-divider-light-1);
+		--color-background: #{color(secondary, light)};
+		--color-background-mute: #{color(primary, light)};
+		--color-background-soft: #{color(secondary, light)};
 
 		--color-heading: var(--vt-c-text-light-1);
 		--color-text: var(--vt-c-text-light-1);
@@ -63,12 +48,9 @@ $colors: (
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--color-background: var(--vt-c-black);
-		--color-background-soft: var(--vt-c-black-soft);
-		--color-background-mute: var(--vt-c-black-mute);
-
-		--color-border: var(--vt-c-divider-dark-2);
-		--color-border-hover: var(--vt-c-divider-dark-1);
+		--color-background: #{color(secondary, dark)};
+		--color-background-mute: #{color(primary, dark)};
+		--color-background-soft: #{color(secondary, dark)};
 
 		--color-heading: var(--vt-c-text-dark-1);
 		--color-text: var(--vt-c-text-dark-2);
