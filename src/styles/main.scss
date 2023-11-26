@@ -1,7 +1,7 @@
-@forward 'colors';
-@forward 'typography';
-@forward 'mediaquery';
-@forward 'layouts';
+@import 'colors';
+@import 'typography';
+@import 'mediaquery';
+@import 'layouts';
 
 *,
 *::before,
@@ -47,6 +47,10 @@ a {
 	padding: 0;
 	// padding: 1rem;
 	font-weight: normal;
+}
+
+#app > main {
+	padding: 2em 0;
 }
 
 // @include media('>=desktop') {
