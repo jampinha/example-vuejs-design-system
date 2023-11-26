@@ -1,13 +1,14 @@
 {
 	"extends": "./tsconfig.app.json",
 	"exclude": [],
-	"include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+	"include": ["src/**/*", "src/**/*.vue", "@/**/*", "@/**/*.vue"],
 	"compilerOptions": {
 		"composite": true,
+		"module": "ESNext",
 		"lib": [],
 		"types": ["node", "jsdom"],
 		"paths": {
-			"@/*": ["./src/*"],
-		},
+			"@/*": ["./src/*"]
+		}
 	}
 }
