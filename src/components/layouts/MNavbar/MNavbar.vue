@@ -31,6 +31,10 @@ const logo = new URL('@/assets/images/meiuca-logo.png', import.meta.url).href;
 	align-items: center;
 	justify-content: space-between;
 
+	-webkit-box-shadow: 0px 2px 8px -1px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 2px 8px -1px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 2px 8px -1px rgba(0, 0, 0, 0.75);
+
 	> .logo {
 		align-self: flex-start;
 		width: 100px;
