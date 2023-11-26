@@ -6,7 +6,7 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
 import { RouterView } from 'vue-router';
-import MSplash from './layouts/MSplash.vue';
+import MSplash from '@/components/layouts/MSplash/MSplash.vue';
 
 const isBooting = ref(true);
 const logo = new URL('@/assets/images/meiuca-logo.png', import.meta.url).href;
