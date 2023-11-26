@@ -1,7 +1,7 @@
 {
   "name": "vue-design-system-example",
-  "version": "0.0.0",
-	"author": "Jampinha",
+  "version": "0.1.0",
+  "author": "Jampinha",
   "private": true,
   "scripts": {
     "dev": "vite",
